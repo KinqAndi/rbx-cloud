@@ -1,0 +1,15 @@
+name = "Rbx-Cloud"
+description = "Rbx-cloud documentation"
+title = "Rbx-Cloud"
+changelog = true
+classOrder = []
+
+[docusaurus]
+onBrokenLinks = "throw"
+onBrokenMarkdownLinks = "warn"
+url = "https://www.rbx-cloud.com"
+baseUrl = "/"
+
+[footer]
+style = "dark"
+copyright = "© 2024 Kinq LLC - built by KinqAndi 👑"

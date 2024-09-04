@@ -1,0 +1,12 @@
+[package]
+name = "kinqandi/addy"
+description = "Rbx-Cloud"
+version = "0.0.2"
+license = "MIT"
+authors = ["KinqAndi"]
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+exclude = ["node_modules", "package.json"]
+
+[dependencies]
+Promise = "evaera/promise@4"

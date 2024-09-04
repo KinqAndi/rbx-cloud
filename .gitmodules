@@ -1,0 +1,3 @@
+[submodule "src/addy"]
+    path = src/addy
+    url = https://github.com/KinqAndi/rbx-cloud.git

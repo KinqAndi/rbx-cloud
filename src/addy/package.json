@@ -1,0 +1,16 @@
+{
+	"name": "@rbx-cloud/addy",
+	"version": "0.0.2",
+	"main": "init.lua",
+	"repository": "github:KinqAndi/rbx-cloud",
+	"license": "MIT",
+	"types": "index.d.ts",
+	"files": [
+		"./",
+		"!*.toml",
+		"!*.json"
+	],
+	"publishConfig": {
+		"access": "public"
+	}
+}
