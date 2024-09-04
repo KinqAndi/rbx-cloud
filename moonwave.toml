@@ -8,7 +8,7 @@ classOrder = []
 onBrokenLinks = "throw"
 onBrokenMarkdownLinks = "warn"
 url = "https://kinqandi.github.io"
-baseUrl = "rbx-cloud"
+baseUrl = "/"
 
 [footer]
 style = "dark"
