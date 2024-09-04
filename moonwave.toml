@@ -7,7 +7,7 @@ classOrder = []
 [docusaurus]
 onBrokenLinks = "throw"
 onBrokenMarkdownLinks = "warn"
-url = "https://kinqandi.github.io"
+url = "http://www.docs.rbx-cloud.com/"
 baseUrl = "/"
 
 [footer]
