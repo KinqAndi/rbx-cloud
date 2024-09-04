@@ -8,7 +8,6 @@ gitSourceBranch = "master"
 [docusaurus]
 onBrokenLinks = "throw"
 onBrokenMarkdownLinks = "warn"
-gitSourceBranch = "master"
 url = "https://kinqandi.github.io"
 baseUrl = "rbx-cloud"
 
