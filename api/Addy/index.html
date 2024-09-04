@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="plugin-moonwave plugin-id-moonwave">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v2.3.1">
+<title data-rh="true">Addy | Rbx-Cloud</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://kinqandi.github.io/rbx-cloud/api/Addy"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="Addy | Rbx-Cloud"><meta data-rh="true" name="description" content="🌤️ The `Addy` class is responsible for managing rbx-cloud configurations
+and interacting with rbx-cloud services."><meta data-rh="true" property="og:description" content="🌤️ The `Addy` class is responsible for managing rbx-cloud configurations
+and interacting with rbx-cloud services."><link data-rh="true" rel="canonical" href="https://kinqandi.github.io/rbx-cloud/api/Addy"><link data-rh="true" rel="alternate" href="https://kinqandi.github.io/rbx-cloud/api/Addy" hreflang="en"><link data-rh="true" rel="alternate" href="https://kinqandi.github.io/rbx-cloud/api/Addy" hreflang="x-default"><link rel="stylesheet" href="/rbx-cloud/assets/css/styles.6b33bbd6.css">
+<link rel="preload" href="/rbx-cloud/assets/js/runtime~main.560b2b66.js" as="script">
+<link rel="preload" href="/rbx-cloud/assets/js/main.739c421d.js" as="script">
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
+<div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/rbx-cloud/"><b class="navbar__title text--truncate">Rbx-Cloud</b></a><a class="navbar__item navbar__link" href="/rbx-cloud/docs/intro">Docs</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/rbx-cloud/api/">API</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/KinqAndi/rbx-cloud" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="searchBox_ZlJk"><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input type="search" id="search_input_react" placeholder="Loading..." aria-label="Search" class="navbar__search-input search-bar" disabled=""></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0 docPageContainer_wNNk"><div class="docPage_Dpn1"><div class="docSidebarContainer_o_re"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/rbx-cloud/api/Addy">​Addy</a></li></ul></nav></div></div><main class="docMainContainer_HJE1"><div class="container padding-vert--lg"><div class="row"><div class="col docItemCol_MU3C"><div class="docItemContainer_Wv98"><article><div class="member_J0w1 markdown"><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_oUs_"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><header><h1 class="docTitle_mZRt" style="text-decoration:none"><span style="display:inline-block">Addy</span></h1><div class="luaClassTags_EipM"></div><div>
+<p>
+  🌤️ The <code>Addy</code> class is responsible for managing rbx-cloud configurations
+  and interacting with rbx-cloud services.
+</p>
+</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="types">Types<a href="#types" class="hash-link" aria-label="Direct link to Types" title="Direct link to Types">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="CloudConfigEnum"><code style="text-decoration:none">CloudConfigEnum</code><a href="#CloudConfigEnum" class="hash-link" aria-label="Direct link to CloudConfigEnum" title="Direct link to CloudConfigEnum">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/KinqAndi/rbx-cloud/blob/master/src/addy/init.lua#L26"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code class="purple_ieR2">type</code> <code>CloudConfigEnum<!-- --> = </code> <code class="blue_P4bS">number</code></div><div>
+<p>Represents a valid enum type for the cloud configuration.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="CloudConfig"><code style="text-decoration:none">CloudConfig</code><a href="#CloudConfig" class="hash-link" aria-label="Direct link to CloudConfig" title="Direct link to CloudConfig">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/KinqAndi/rbx-cloud/blob/master/src/addy/init.lua#L35"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code class="purple_ieR2">type</code> <code>CloudConfig<!-- --> = </code> <code class="purple_ieR2">{</code><div class="inset_uKQm"><code>universeId<!-- -->: </code><code class="blue_P4bS">number</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>authToken<!-- -->: </code><code class="blue_P4bS">string</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>CloudConfigEnum<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/rbx-cloud/api/Addy#CloudConfigEnum">CloudConfigEnum</a></code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>MaxRetries<!-- -->: </code><code class="blue_P4bS">number?</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>RetryDelay<!-- -->: </code><code class="blue_P4bS">number?</code></div><code class="purple_ieR2">}</code></div><div>
+<p>Contains the configuration for the cloud services.</p>
+</div><h2 class="anchor anchorWithStickyNavbar_LWe7" id="properties">Properties<a href="#properties" class="hash-link" aria-label="Direct link to Properties" title="Direct link to Properties">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="CloudConfigEnums"><code style="text-decoration:none">CloudConfigEnums</code><a href="#CloudConfigEnums" class="hash-link" aria-label="Direct link to CloudConfigEnums" title="Direct link to CloudConfigEnums">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/KinqAndi/rbx-cloud/blob/master/src/addy/init.lua#L48"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Addy<!-- -->.<!-- -->CloudConfigEnums<!-- -->:<!-- --> </code> <code class="purple_ieR2">{</code><code>SerialNumber<!-- -->: </code><code class="blue_P4bS">1</code><code class="purple_ieR2">}</code></div><div>
+<p>Table containing cloud configuration enums used for validation.</p>
+</div><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="new"><code style="text-decoration:none">new</code><a href="#new" class="hash-link" aria-label="Direct link to new" title="Direct link to new">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/KinqAndi/rbx-cloud/blob/master/src/addy/init.lua#L77"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Addy<!-- -->.</code><code class="green_DgR4">new</code><code>(</code><div class="inset_uKQm"><div><code>cloudConfig<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/rbx-cloud/api/Addy#CloudConfig">CloudConfig</a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The configuration details for the cloud.</p>
+</span></span></div><div><code>baseUrl<!-- -->: </code><code class="blue_P4bS">string?</code><span class="inlineDescription_G7Er">-- <span>
+<p>(Optional) The base URL of the cloud service. Defaults to <code>"https://www.rbx-cloud.com/"</code>.</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/rbx-cloud/api/Addy">Addy</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>A new instance of the <code>Addy</code> class.</p>
+</span></span></div><div>
+<h4>Usage Example</h4>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> Addy <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span>Packages<span class="token punctuation">.</span>Addy<span class="token punctuation">)</span>
+
+<span class="token keyword">local</span> cloudConfig <span class="token operator">=</span> <span class="token punctuation">{</span>
+   universeId <span class="token operator">=</span> <span class="token number">123456789</span><span class="token punctuation">,</span>
+   authToken <span class="token operator">=</span> <span class="token string">"your-auth-token"</span><span class="token punctuation">,</span>
+   CloudConfigEnum <span class="token operator">=</span> Addy<span class="token punctuation">.</span>CloudConfigEnums<span class="token punctuation">.</span>SerialIndex<span class="token punctuation">,</span>
+   MaxRetries <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">,</span>
+   RetryDelay <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">local</span> addyInstance <span class="token operator">=</span> Addy<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span>cloudConfig<span class="token punctuation">)</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="GetSerial"><code style="text-decoration:none">GetSerial</code><a href="#GetSerial" class="hash-link" aria-label="Direct link to GetSerial" title="Direct link to GetSerial">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/KinqAndi/rbx-cloud/blob/master/src/addy/init.lua#L110"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Addy<!-- -->:</code><code class="green_DgR4">GetSerial</code><code>(</code><div class="inset_uKQm"><div><code>uniqueId<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The unique identifier for which the serial is requested.</p>
+</span></span></div><div><code>dontIncrement<!-- -->: </code><code class="blue_P4bS">boolean?</code><span class="inlineDescription_G7Er">-- <span>
+<p>(Optional) If true, the serial number is not incremented.</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">Promise</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">number</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
+<p>A promise that resolves with the serial number.</p>
+</span></span></div><div>
+<p>You can retrieve a serial number for a unique ID using the <code>GetSerial</code> method:</p>
+<h4>Usage Example</h4>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> uniqueId <span class="token operator">=</span> <span class="token string">"item12345"</span>
+addyInstance<span class="token punctuation">:</span><span class="token function">GetSerial</span><span class="token punctuation">(</span>uniqueId<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token function">andThen</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>serialNumber<span class="token punctuation">)</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Serial number for "</span> <span class="token operator">..</span> uniqueId <span class="token operator">..</span> <span class="token string">": "</span> <span class="token operator">..</span> serialNumber<span class="token punctuation">)</span>
+<span class="token keyword">end</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+    <span class="token function">warn</span><span class="token punctuation">(</span><span class="token string">"Failed to retrieve serial: "</span> <span class="token operator">..</span> error<span class="token punctuation">)</span>
+<span class="token keyword">end</span><span class="token punctuation">)</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="GetBulkSerial"><code style="text-decoration:none">GetBulkSerial</code><a href="#GetBulkSerial" class="hash-link" aria-label="Direct link to GetBulkSerial" title="Direct link to GetBulkSerial">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/KinqAndi/rbx-cloud/blob/master/src/addy/init.lua#L172"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Addy<!-- -->:</code><code class="green_DgR4">GetBulkSerial</code><code>(</code><div class="inset_uKQm"><div><code>uniqueIds<!-- -->: </code><code class="purple_ieR2">{</code><code class="blue_P4bS">string</code><code class="purple_ieR2">}</code><code>,</code></div><div><code>dontIncrement<!-- -->: </code><code class="blue_P4bS">boolean?</code><span class="inlineDescription_G7Er">-- <span>
+<p>(Optional) If true, the serial numbers are not incremented.</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">Promise</code><code class="op_lSLc">&lt;</code><code class="purple_ieR2">{</code><code class="blue_P4bS">number</code><code class="purple_ieR2">}</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
+<p>A promise that resolves with a list of serial numbers.</p>
+</span></span></div><div>
+<p>Retrieves serial numbers in bulk for multiple unique IDs from the cloud.</p>
+<h4>You can retrieve serial numbers for multiple unique IDs using <code>GetBulkSerial</code>:</h4>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> uniqueIds <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"item12345"</span><span class="token punctuation">,</span> <span class="token string">"item67890"</span><span class="token punctuation">,</span> <span class="token string">"item111213"</span><span class="token punctuation">}</span>
+
+addyInstance<span class="token punctuation">:</span><span class="token function">GetBulkSerial</span><span class="token punctuation">(</span>uniqueIds<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token function">andThen</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>serialNumbers<span class="token punctuation">)</span>
+    <span class="token keyword">for</span> i<span class="token punctuation">,</span> serial <span class="token keyword">in</span> <span class="token function">ipairs</span><span class="token punctuation">(</span>serialNumbers<span class="token punctuation">)</span> <span class="token keyword">do</span>
+        <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Serial for "</span> <span class="token operator">..</span> uniqueIds<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">..</span> <span class="token string">": "</span> <span class="token operator">..</span> serial<span class="token punctuation">)</span>
+    <span class="token keyword">end</span>
+<span class="token keyword">end</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+    <span class="token function">warn</span><span class="token punctuation">(</span><span class="token string">"Failed to retrieve serials: "</span> <span class="token operator">..</span> error<span class="token punctuation">)</span>
+<span class="token keyword">end</span><span class="token punctuation">)</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="GetSerialAsync"><code style="text-decoration:none">GetSerialAsync</code><a href="#GetSerialAsync" class="hash-link" aria-label="Direct link to GetSerialAsync" title="Direct link to GetSerialAsync">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/KinqAndi/rbx-cloud/blob/master/src/addy/init.lua#L238"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Addy<!-- -->:</code><code class="green_DgR4">GetSerialAsync</code><code>(</code><div class="inset_uKQm"><div><code>uniqueId<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The unique identifier for which the serial is requested.</p>
+</span></span></div><div><code>dontIncrement<!-- -->: </code><code class="blue_P4bS">boolean?</code><span class="inlineDescription_G7Er">-- <span>
+<p>(Optional) If true, the serial number is not incremented.</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">number?</code><span class="inlineDescription_G7Er">-- <span>
+<p>The serial number, or <code>nil</code> if the operation fails.</p>
+</span></span></div><div>
+<h4>If you prefer synchronous operations, you can use the <code>GetSerialAsync</code> and <code>GetBulkSerialAsync</code> methods:</h4>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> serial <span class="token operator">=</span> addyInstance<span class="token punctuation">:</span><span class="token function">GetSerialAsync</span><span class="token punctuation">(</span><span class="token string">"item12345"</span><span class="token punctuation">)</span>
+<span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Synchronous serial number: "</span> <span class="token operator">..</span> <span class="token punctuation">(</span>serial <span class="token keyword">or</span> <span class="token string">"Failed"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">local</span> bulkSerials <span class="token operator">=</span> addyInstance<span class="token punctuation">:</span><span class="token function">GetBulkSerialAsync</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">"item12345"</span><span class="token punctuation">,</span> <span class="token string">"item67890"</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Synchronous bulk serials: "</span><span class="token punctuation">,</span> bulkSerials<span class="token punctuation">)</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="GetBulkSerialAsync"><code style="text-decoration:none">GetBulkSerialAsync</code><a href="#GetBulkSerialAsync" class="hash-link" aria-label="Direct link to GetBulkSerialAsync" title="Direct link to GetBulkSerialAsync">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/KinqAndi/rbx-cloud/blob/master/src/addy/init.lua#L249"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Addy<!-- -->:</code><code class="green_DgR4">GetBulkSerialAsync</code><code>(</code><div class="inset_uKQm"><div><code>uniqueIds<!-- -->: </code><code class="purple_ieR2">{</code><code class="blue_P4bS">string</code><code class="purple_ieR2">}</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>A list of unique IDs for which the serials are requested.</p>
+</span></span></div><div><code>dontIncrement<!-- -->: </code><code class="blue_P4bS">boolean?</code><span class="inlineDescription_G7Er">-- <span>
+<p>(Optional) If true, the serial numbers are not incremented.</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">number?</code><span class="inlineDescription_G7Er">-- <span>
+<p>The serial numbers, or <code>nil</code> if the operation fails.</p>
+</span></span></div><div>
+<p>Retrieves serial numbers in bulk for multiple unique IDs synchronously.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Destroy"><code style="text-decoration:none">Destroy</code><a href="#Destroy" class="hash-link" aria-label="Direct link to Destroy" title="Direct link to Destroy">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/KinqAndi/rbx-cloud/blob/master/src/addy/init.lua#L257"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Addy<!-- -->:</code><code class="green_DgR4">Destroy</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Cleans up and destroys the Addy instance.</p>
+</div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
+    &quot;functions&quot;: [
+        {
+            &quot;name&quot;: &quot;new&quot;,
+            &quot;desc&quot;: &quot;#### Usage Example\n\n ```lua\nlocal Addy = require(Packages.Addy)\n\nlocal cloudConfig = {\n    universeId = 123456789,\n    authToken = \&quot;your-auth-token\&quot;,\n    CloudConfigEnum = Addy.CloudConfigEnums.SerialIndex,\n    MaxRetries = 3,\n    RetryDelay = 5,\n}\n\nlocal addyInstance = Addy.new(cloudConfig)\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;cloudConfig&quot;,
+                    &quot;desc&quot;: &quot;The configuration details for the cloud.&quot;,
+                    &quot;lua_type&quot;: &quot;CloudConfig&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;baseUrl&quot;,
+                    &quot;desc&quot;: &quot;(Optional) The base URL of the cloud service. Defaults to `\&quot;https://www.rbx-cloud.com/\&quot;`.&quot;,
+                    &quot;lua_type&quot;: &quot;string?&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;A new instance of the `Addy` class.&quot;,
+                    &quot;lua_type&quot;: &quot;Addy&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 77,
+                &quot;path&quot;: &quot;src/addy/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;GetSerial&quot;,
+            &quot;desc&quot;: &quot;You can retrieve a serial number for a unique ID using the `GetSerial` method:\n\n#### Usage Example\n```lua\nlocal uniqueId = \&quot;item12345\&quot;\naddyInstance:GetSerial(uniqueId):andThen(function(serialNumber)\n    print(\&quot;Serial number for \&quot; .. uniqueId .. \&quot;: \&quot; .. serialNumber)\nend):catch(function(error)\n    warn(\&quot;Failed to retrieve serial: \&quot; .. error)\nend)\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;uniqueId&quot;,
+                    &quot;desc&quot;: &quot;The unique identifier for which the serial is requested.&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;dontIncrement&quot;,
+                    &quot;desc&quot;: &quot;(Optional) If true, the serial number is not incremented.&quot;,
+                    &quot;lua_type&quot;: &quot;boolean?&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;A promise that resolves with the serial number.&quot;,
+                    &quot;lua_type&quot;: &quot;Promise&lt;number&gt;&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 110,
+                &quot;path&quot;: &quot;src/addy/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;GetBulkSerial&quot;,
+            &quot;desc&quot;: &quot;Retrieves serial numbers in bulk for multiple unique IDs from the cloud.\n\n#### You can retrieve serial numbers for multiple unique IDs using `GetBulkSerial`:\n\n```lua\nlocal uniqueIds = {\&quot;item12345\&quot;, \&quot;item67890\&quot;, \&quot;item111213\&quot;}\n\naddyInstance:GetBulkSerial(uniqueIds):andThen(function(serialNumbers)\n    for i, serial in ipairs(serialNumbers) do\n        print(\&quot;Serial for \&quot; .. uniqueIds[i] .. \&quot;: \&quot; .. serial)\n    end\nend):catch(function(error)\n    warn(\&quot;Failed to retrieve serials: \&quot; .. error)\nend)\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;uniqueIds&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;{string}&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;dontIncrement&quot;,
+                    &quot;desc&quot;: &quot;(Optional) If true, the serial numbers are not incremented.&quot;,
+                    &quot;lua_type&quot;: &quot;boolean?&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;A promise that resolves with a list of serial numbers.&quot;,
+                    &quot;lua_type&quot;: &quot;Promise&lt;{number}&gt;&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 172,
+                &quot;path&quot;: &quot;src/addy/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;GetSerialAsync&quot;,
+            &quot;desc&quot;: &quot;#### If you prefer synchronous operations, you can use the `GetSerialAsync` and `GetBulkSerialAsync` methods:\n\n```lua\nlocal serial = addyInstance:GetSerialAsync(\&quot;item12345\&quot;)\nprint(\&quot;Synchronous serial number: \&quot; .. (serial or \&quot;Failed\&quot;))\n\nlocal bulkSerials = addyInstance:GetBulkSerialAsync({\&quot;item12345\&quot;, \&quot;item67890\&quot;})\nprint(\&quot;Synchronous bulk serials: \&quot;, bulkSerials)\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;uniqueId&quot;,
+                    &quot;desc&quot;: &quot;The unique identifier for which the serial is requested.&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;dontIncrement&quot;,
+                    &quot;desc&quot;: &quot;(Optional) If true, the serial number is not incremented.&quot;,
+                    &quot;lua_type&quot;: &quot;boolean?&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The serial number, or `nil` if the operation fails.&quot;,
+                    &quot;lua_type&quot;: &quot;number?&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 238,
+                &quot;path&quot;: &quot;src/addy/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;GetBulkSerialAsync&quot;,
+            &quot;desc&quot;: &quot;Retrieves serial numbers in bulk for multiple unique IDs synchronously.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;uniqueIds&quot;,
+                    &quot;desc&quot;: &quot;A list of unique IDs for which the serials are requested.&quot;,
+                    &quot;lua_type&quot;: &quot;{string}&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;dontIncrement&quot;,
+                    &quot;desc&quot;: &quot;(Optional) If true, the serial numbers are not incremented.&quot;,
+                    &quot;lua_type&quot;: &quot;boolean?&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The serial numbers, or `nil` if the operation fails.&quot;,
+                    &quot;lua_type&quot;: &quot;number?&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 249,
+                &quot;path&quot;: &quot;src/addy/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;Destroy&quot;,
+            &quot;desc&quot;: &quot;Cleans up and destroys the Addy instance.&quot;,
+            &quot;params&quot;: [],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 257,
+                &quot;path&quot;: &quot;src/addy/init.lua&quot;
+            }
+        }
+    ],
+    &quot;properties&quot;: [
+        {
+            &quot;name&quot;: &quot;CloudConfigEnums&quot;,
+            &quot;desc&quot;: &quot;Table containing cloud configuration enums used for validation.&quot;,
+            &quot;lua_type&quot;: &quot;{SerialNumber: 1}&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 48,
+                &quot;path&quot;: &quot;src/addy/init.lua&quot;
+            }
+        }
+    ],
+    &quot;types&quot;: [
+        {
+            &quot;name&quot;: &quot;CloudConfigEnum&quot;,
+            &quot;desc&quot;: &quot;Represents a valid enum type for the cloud configuration.&quot;,
+            &quot;lua_type&quot;: &quot;number&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 26,
+                &quot;path&quot;: &quot;src/addy/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;CloudConfig&quot;,
+            &quot;desc&quot;: &quot;Contains the configuration for the cloud services.&quot;,
+            &quot;lua_type&quot;: &quot;{universeId: number,authToken: string, CloudConfigEnum: CloudConfigEnum, MaxRetries: number?, RetryDelay: number?}&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 35,
+                &quot;path&quot;: &quot;src/addy/init.lua&quot;
+            }
+        }
+    ],
+    &quot;name&quot;: &quot;Addy&quot;,
+    &quot;desc&quot;: &quot;🌤️ The `Addy` class is responsible for managing rbx-cloud configurations\nand interacting with rbx-cloud services.&quot;,
+    &quot;source&quot;: {
+        &quot;line&quot;: 14,
+        &quot;path&quot;: &quot;src/addy/init.lua&quot;
+    }
+}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a><ul><li><a href="#CloudConfig" class="table-of-contents__link toc-highlight">CloudConfig</a></li><li><a href="#CloudConfigEnum" class="table-of-contents__link toc-highlight">CloudConfigEnum</a></li></ul></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a><ul><li><a href="#CloudConfigEnums" class="table-of-contents__link toc-highlight">CloudConfigEnums</a></li></ul></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#Destroy" class="table-of-contents__link toc-highlight">:Destroy</a></li><li><a href="#GetBulkSerial" class="table-of-contents__link toc-highlight">:GetBulkSerial</a></li><li><a href="#GetBulkSerialAsync" class="table-of-contents__link toc-highlight">:GetBulkSerialAsync</a></li><li><a href="#GetSerial" class="table-of-contents__link toc-highlight">:GetSerial</a></li><li><a href="#GetSerialAsync" class="table-of-contents__link toc-highlight">:GetSerialAsync</a></li><li><a href="#new" class="table-of-contents__link toc-highlight">.new</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">© 2024 Kinq LLC - built by KinqAndi 👑</div></div></div></footer></div>
+<script src="/rbx-cloud/assets/js/runtime~main.560b2b66.js"></script>
+<script src="/rbx-cloud/assets/js/main.739c421d.js"></script>
+</body>
+</html>
