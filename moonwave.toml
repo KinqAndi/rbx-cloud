@@ -3,12 +3,14 @@ description = "Rbx-cloud documentation"
 title = "Rbx-Cloud"
 changelog = true
 classOrder = []
+gitSourceBranch = "master"
 
 [docusaurus]
 onBrokenLinks = "throw"
 onBrokenMarkdownLinks = "warn"
-url = "https://www.rbx-cloud.com"
-baseUrl = "/"
+gitSourceBranch = "main"
+url = "https://kinqandi.github.io"
+baseUrl = "rbx-cloud"
 
 [footer]
 style = "dark"
