@@ -3,7 +3,6 @@ description = "Rbx-cloud documentation"
 title = "Rbx-Cloud"
 changelog = true
 classOrder = []
-gitSourceBranch = "master"
 
 [docusaurus]
 onBrokenLinks = "throw"
